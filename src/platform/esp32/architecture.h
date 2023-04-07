@@ -76,6 +76,8 @@
 #define HW_VENDOR meshtastic_HardwareModel_TLORA_V1_1P3
 #elif defined(TLORA_V2_1_16)
 #define HW_VENDOR meshtastic_HardwareModel_TLORA_V2_1_1P6
+#elif defined(TLORA_V2_1_16_NoScreen)
+#define HW_VENDOR meshtastic_HardwareModel_TLORA_V2_1_1P6_NS
 #elif defined(TLORA_V2_1_18)
 #define HW_VENDOR meshtastic_HardwareModel_TLORA_V2_1_1P8
 #elif defined(GENIEBLOCKS)

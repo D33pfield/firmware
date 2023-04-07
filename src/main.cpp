@@ -130,7 +130,7 @@ const char *getDeviceName()
     if ((owner.short_name != NULL) && (strcmp(owner.short_name, name) != 0)) {
         snprintf(name, sizeof(name), "%s_%02x%02x", owner.short_name, dmac[4], dmac[5]);
     } else {
-        snprintf(name, sizeof(name), "Meshtastic_%02x%02x", dmac[4], dmac[5]);
+        snprintf(name, sizeof(name), "Node_%02x%02x", dmac[4], dmac[5]);
     }
     return name;
 }
@@ -204,7 +204,8 @@ void setup()
 
     serialSinceMsec = millis();
 
-    LOG_INFO("\n\n//\\ E S H T /\\ S T / C\n\n");
+    //LOG_INFO("\n\n//\\ E S H T /\\ S T / C\n\n");
+    LOG_INFO("Starting up... \n\n Or Shutting down...");
 
     initDeepSleep();
 
