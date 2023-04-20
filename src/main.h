@@ -5,7 +5,6 @@
 #include "PowerStatus.h"
 #include "detect/ScanI2C.h"
 #include "graphics/Screen.h"
-#include "memGet.h"
 #include "mesh/generated/meshtastic/config.pb.h"
 #include "mesh/generated/meshtastic/telemetry.pb.h"
 #include <map>

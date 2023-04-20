@@ -1,6 +1,5 @@
 #include "OSThread.h"
 #include "configuration.h"
-#include "memGet.h"
 #include <assert.h>
 
 namespace concurrency
@@ -76,12 +75,12 @@ bool OSThread::shouldRun(unsigned long time)
 void OSThread::run()
 {
 #ifdef DEBUG_HEAP
-    auto heap = memGet.getFreeHeap();
+    auto heap = ESP.getFreeHeap();
 #endif
     currentThread = this;
     auto newDelay = runOnce();
 #ifdef DEBUG_HEAP
-    auto newHeap = memGet.getFreeHeap();
+    auto newHeap = ESP.getFreeHeap();
     if (newHeap < heap)
         LOG_DEBUG("------ Thread %s leaked heap %d -> %d (%d) ------\n", ThreadName.c_str(), heap, newHeap, newHeap - heap);
     if (heap < newHeap)

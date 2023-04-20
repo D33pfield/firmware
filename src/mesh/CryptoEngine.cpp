@@ -1,8 +1,6 @@
 #include "CryptoEngine.h"
 #include "configuration.h"
 
-concurrency::Lock *cryptLock;
-
 void CryptoEngine::setKey(const CryptoKey &k)
 {
     LOG_DEBUG("Using AES%d key!\n", k.length * 8);

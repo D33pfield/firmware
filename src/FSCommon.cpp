@@ -34,7 +34,6 @@ bool copyFile(const char *from, const char *to)
         f2.write(cbuffer, i);
     }
 
-    f2.flush();
     f2.close();
     f1.close();
     return true;
